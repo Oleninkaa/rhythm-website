@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Cal Sans';
+    src: url('CalSans-SemiBold.eot');
+    src: url('CalSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('CalSans-SemiBold.woff2') format('woff2'),
+        url('CalSans-SemiBold.woff') format('woff'),
+        url('CalSans-SemiBold.ttf') format('truetype'),
+        url('CalSans-SemiBold.svg#CalSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

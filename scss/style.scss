@@ -1,0 +1,95 @@
+@import url("null.css");
+@import "_fonts.scss";
+
+
+$gray: rgba(18, 18, 18, 0.40);
+$primary: #FF6428;
+
+%fontCal{
+    font-family: 'Cal Sans';
+    color: #121212;
+    font-size: 2.75rem;
+    font-weight: 600;
+
+}
+
+
+body{
+    font-family: Poppins;
+    font-weight: 400;
+
+}
+
+[class*=__container] {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+
+
+.header {
+}
+.page {
+    flex: 1 1 auto;
+}
+.footer {
+}
+
+
+
+
+
+.header {
+   
+    padding: 3.875rem 0;
+    .header__container {
+        padding-right: 35rem;
+        display: flex;
+        gap: 8.125rem;
+    }
+    .header__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .75rem;
+        @extend %fontCal;
+        font-size: 1.5rem;
+    }
+    .header__menu {
+    }
+}
+
+.menu {
+    .menu__list {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 3.5rem;
+        row-gap: 1.25rem;
+    
+    }
+    .menu__item {
+    }
+    .menu__link {
+        color: $gray;
+        font-weight: 500;
+        transition: all 0.5s;
+        position: relative;
+        
+        &:hover{
+            text-decoration: underline;
+            color: $primary;
+            top: 1px;
+            
+        }
+    }
+}

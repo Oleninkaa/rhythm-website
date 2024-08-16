@@ -1,0 +1,73 @@
+@import url("null.css");
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap);
+@font-face {
+  font-family: "Cal Sans";
+  src: url("/fonts/CalSans-SemiBold.eot");
+  src: url("/fonts/CalSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("/fonts/CalSans-SemiBold.woff2") format("woff2"), url("/fonts/CalSans-SemiBold.woff") format("woff"), url("/fonts/CalSans-SemiBold.ttf") format("truetype"), url("/fonts/CalSans-SemiBold.svg#CalSans-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.header .header__logo {
+  font-family: "Cal Sans";
+  color: #121212;
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+body {
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+[class*=__container] {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.header {
+  padding: 3.875rem 0;
+}
+.header .header__container {
+  padding-right: 35rem;
+  display: flex;
+  gap: 8.125rem;
+}
+.header .header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+}
+.menu .menu__list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 3.5rem;
+  row-gap: 1.25rem;
+}
+.menu .menu__link {
+  color: rgba(18, 18, 18, 0.4);
+  font-weight: 500;
+  transition: all 0.5s;
+  position: relative;
+}
+.menu .menu__link:hover {
+  text-decoration: underline;
+  color: #FF6428;
+  top: 1px;
+}/*# sourceMappingURL=style.css.map */
