@@ -1,0 +1,51 @@
+
+/*
+<div class="store__container">
+    <div class="group__title">Check out the <span>Store</span></div>
+</div>
+
+*/
+
+
+
+.group__title{
+    text-align: center;
+    font-family: 'Cal Sans';
+    color: #121212;
+    font-size: 2.75rem;
+    font-weight: 400;
+
+    &:not(:last-child){
+        margin-bottom: 5.625rem;
+
+        @media (max-width:$tablet){
+            margin-bottom: 3.75rem;
+        }
+    
+        @media (max-width:$mobile){
+            margin-bottom: 2.5rem;
+        }
+    
+        @media (max-width:$mobileSmall){
+            margin-bottom: 2.1875rem;
+        }
+    }
+
+    span{
+        color: $primary;
+    }
+
+    @media (max-width:$tablet){
+        font-size: 2.375rem;
+    }
+
+    @media (max-width:$mobile){
+        font-size: 2.1875rem;
+    }
+
+    @media (max-width:$mobileSmall){
+        font-size: 1.5625rem;
+
+    }
+
+}
