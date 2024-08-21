@@ -15,6 +15,10 @@
     font-size: 2.75rem;
     font-weight: 400;
 
+    &--light{
+        color: $white;
+    }
+
     &:not(:last-child){
         margin-bottom: 5.625rem;
 

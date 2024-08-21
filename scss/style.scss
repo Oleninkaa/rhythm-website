@@ -568,17 +568,21 @@ section{
 .categories {
 
     padding-top: 5.625rem;
+    padding-bottom: 110px;
 
     @media (max-width: $tablet){
         padding-top: 4.375rem;
+        padding-bottom: 5rem;
     }
 
     @media (max-width: $mobile){
         padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
     }
 
     @media (max-width: $mobileSmall){
         padding-top: 3.125rem;
+        padding-bottom: 3.125rem;
     }
 
     .categories__container {
@@ -666,6 +670,410 @@ section{
         }
     }
 }
+
+
+////////////BRANDS
+/// 
+.page__brands {
+}
+.brands {
+
+    padding-top: 6.875rem;
+    padding-bottom: 5.625rem;
+
+    @media (max-width: $tablet){
+        padding-top: 5rem;
+        padding-bottom: 4.375rem;
+    }
+
+    @media (max-width: $mobile){
+        padding-top: 3.75rem;
+        padding-bottom: 3.125rem;
+    }
+
+    @media (max-width: $mobileSmall){
+        padding-top: 3.125rem;
+        padding-bottom: 2.5rem;
+    }
+    .brands__container {
+    }
+   
+    .brands__title {
+    }
+    .brands__logos {
+        max-width: 63.75rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+        column-gap: 1.25rem;
+        row-gap: 5rem;
+
+        @media (max-width:$mobile) {
+            grid-template-columns: repeat(3, auto);
+            
+        }
+
+        @media (max-width:$mobileSmall) {
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            row-gap: 4rem;
+            column-gap: 1.875rem;
+            
+        }
+    }
+    .brands__logo-link {
+       
+
+        img{
+           max-width: 100%;
+        }
+    }
+}
+
+
+////////////WHY
+/// 
+.page__why-try {
+    margin-top: 5.625rem;
+    margin-bottom: 200px;
+    
+    @media (max-width:$tablet){
+        margin-top: 4.375rem;
+        margin-bottom: 150px;
+        
+    }
+    @media (max-width:61.9988rem){
+        margin-top: 3.75rem;
+        margin-bottom: 100px;
+        
+    }
+    @media (max-width:$mobileSmall){
+        margin-top: 3.125rem;
+        margin-bottom: 90px;
+    }
+
+}
+.why-try {
+    
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: $dark;
+    .why-try__container {
+    }
+
+    .why-try__title {
+
+    }
+    .why-try__reasons {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px ;
+        row-gap: 30px;
+
+        @media (max-width:$mobileSmall){
+            flex-direction: column;
+            align-items: center;
+           
+        }
+        
+    }
+    .why-try__reason {
+        max-width: 220px;
+       
+        text-align: center;
+        padding: .3125rem .625rem;
+    }
+    
+}
+
+.reason{
+    
+    .reason__picture {
+        background-color: #262626;
+        border-radius: 20px;
+        height: 4.5rem;
+        width: 4.5rem;
+        margin: 0 auto;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding: 20px;
+        }
+    }
+
+    .reason__title{
+        padding-top: 2.5rem;
+        color: $white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        letter-spacing: .09rem;
+        text-transform: uppercase;
+
+        @media (max-width:$tablet){
+            font-size: 1rem;
+        }
+
+        @media (max-width:$mobile){
+            font-size: 14px;
+            padding-top: 1  .875rem;
+        }
+        @media (max-width:$mobileSmall){
+           
+            padding-top: 1.25rem;
+        }
+
+        
+        
+    }
+    .reason__text {
+        padding-top: .75rem;
+        font-size: .875rem;
+        
+        @media (max-width:$tablet){
+            font-size: 12px;
+        }
+
+    }
+}
+
+
+/////////reviews
+/// 
+/// 
+
+
+.page__reviews {
+}
+.reviews {
+    padding-top: 200px;
+    padding-bottom: 120px;
+    
+    @media (max-width:$tablet){
+        padding-top: 150px;
+        padding-bottom: 90px;
+        
+    }
+    @media (max-width:61.9988rem){
+        padding-top: 100px;
+        padding-bottom: 90px;
+        
+    }
+    @media (max-width:$mobileSmall){
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
+
+    .reviews__container {
+
+        @media (max-width:$mobileSmall){
+            padding: 0;
+        }
+    }
+    
+    .reviews__title {
+    }
+    .reviews__swiper {
+    }
+}
+
+.swiper-reviews {
+    position: relative;
+    .swiper-reviews__wrapper {
+    }
+    
+    .swiper-reviews__slide {
+        display: flex;
+        row-gap: 30px;
+
+        @media (max-width: $tablet){
+            flex-direction: column;
+
+        }
+        
+    }
+
+    .swiper-reviews__pagination {
+        display: flex;
+        transform: translate(0px, -100%);
+        align-items: center;
+        justify-content: flex-end;
+
+        @media (max-width: $mobileSmall){
+            justify-content: center;
+            position: relative;
+            bottom: 0;
+            transform: translate(0px, 0px);
+            padding-top: 30px;
+           
+        }
+       
+        .swiper-pagination-bullet{
+            opacity: 1;
+            border-radius: 1.25rem;
+            background: #C4C4C4;
+            flex: 0 0 .625rem;
+            height: 1rem;
+            gap: 1rem;
+            transition: all 0.3s ease 0s;
+        }
+        .swiper-pagination-bullet-active{
+            height: .75rem;
+            flex: 0 0 1.5rem;
+            background: $primary;
+        }
+    }
+}
+
+
+.slide-swiper-reviews {
+   
+
+    .slide-swiper-reviews__picture{
+       
+        flex: 0 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @media (max-width:$mobileSmall){
+            padding-left: 60px;
+        }
+        
+    
+    }
+    .slide-swiper-reviews__image {
+        position: relative;
+        
+        width: 20.625rem;
+        height: 20.625rem;
+        
+        @media (max-width:$mobileSmall){
+            width: 16.875rem;
+            height: 16.875rem;
+        }
+
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 12.5rem;
+            z-index: 2;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 17.8125rem;
+            height: 16.125rem;
+            top: 50px;
+            right: 90px;
+            background-color: $primary;
+            border-radius: 40px 0px 400px 400px;
+            transform: rotate(-7.724deg);
+            flex-shrink: 0;
+            z-index: 1;
+
+            @media (max-width:$mobileSmall){
+                width: 205px;
+                height: 178px;
+            }
+        }
+
+        
+    }
+    .slide-swiper-reviews__body {
+        flex: 0 1 50%;
+        
+        @media (max-width:$mobileSmall){
+            padding: 0 .9375rem;
+        }
+    }
+    .slide-swiper-reviews__text {
+        font-size: 1.5rem;
+        line-height: 160%;
+
+        &:not(:last-child){
+            padding-bottom: 3.4375rem;
+
+            @media (max-width:$tablet){
+                padding-bottom: 2.5rem;
+            }
+    
+            @media (max-width:$mobileSmall){
+                padding-bottom: 1.875rem;
+            }
+        }
+
+        p{
+            text-align: justify;
+            &:not(:last-child){
+                padding-bottom: .9375rem;
+            }
+        }
+
+        @media (max-width:$tablet){
+            font-size: 1.25rem;
+        }
+
+        @media (max-width:$mobileSmall){
+            font-size: 1rem;
+        }
+    }
+    .slide-swiper-reviews__author {
+        
+        @media (min-width:$mobileSmall) {
+            max-width: 70%;
+        }
+        
+    }
+    .slide-swiper-reviews__name {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 160%;
+        text-transform: capitalize;
+
+        &:not(:last-child){
+            padding-bottom: .5rem;
+        }
+
+        @media (max-width:$tablet){
+            font-size: 1.25rem;
+        }
+
+        @media (max-width:$mobileSmall){
+            font-size: 1rem;
+        }
+    }
+    .slide-swiper-reviews__position {
+        color: $link-grey;
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: .09rem;
+        text-transform: uppercase;
+
+        @media (max-width:$tablet){
+            font-size: 1rem;
+        }
+
+        @media (max-width:$mobileSmall){
+            font-size: .875rem;
+        }
+    }
+    
+}
+
+
 
 
 
