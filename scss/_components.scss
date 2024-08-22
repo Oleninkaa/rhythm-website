@@ -53,3 +53,21 @@
     }
 
 }
+
+
+
+
+.footer-title {
+    color: #121212;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:not(:last-child){
+        padding-bottom: 1.25rem;
+    }
+
+    @media (max-width:$mobile){
+        font-size: 1rem;
+    }
+}
