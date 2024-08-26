@@ -76,6 +76,12 @@
   }
 }
 
+.invisible {
+  position: absolute;
+  opacity: 0;
+  transform-origin: top;
+}
+
 .footer .footer__logo, .hero .hero__title, .header .header__logo {
   font-family: "Cal Sans";
   color: #121212;

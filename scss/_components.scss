@@ -71,3 +71,16 @@
         font-size: 1rem;
     }
 }
+
+
+
+.invisible {
+    position: absolute;
+    opacity: 0;
+    
+    transform-origin: top;
+}
+
+
+
+
