@@ -10,12 +10,18 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__container">
+            <nav class="header__container">
+                
                 <a href="#" class="header__logo">
                     <img src="img/logo.svg" alt="logo">
                     Rhythm
                 </a>
-                <nav class="header__menu menu">
+                <span id="nav-label" hidden>Navigation</span>
+                <button class="header__open-menu" aria-expanded="false" aria-labelledby="nav-label" id="btnOpen">
+                    <span></span>
+                </button>
+                <div class="header__menu menu" role="dialog">
+                    <button class="menu__close" id="btnClose" aria-label="Close"><img src="img/close.png" alt="" width="28px" height="28px" aria-labelledby="nav-label"></button>
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a href="#store" class="menu__link">Store</a>
@@ -28,8 +34,8 @@
                         </li>
                    
                     </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </header>
         <main class="page">
             <section class="page__hero hero">
@@ -443,7 +449,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    
+    <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js"></script>
+    <script src="js/script.js" type="module"></script>
+   
 </body>
 
 </html>

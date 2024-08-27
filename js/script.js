@@ -51,13 +51,13 @@ const defaultSize = 3;
 const cardsNames = ["#top-selling", "#new"];
 
 cardsNames.forEach(cardName => {
-    console.log(cardName);
+   
     const items = document.querySelectorAll(`${cardName} .card__item`); // всі картки
-    console.log(items);
+   
     defaultVidibility(items); // зробити невидимими всі картки, що перевищують дефолтний розмір
 
     const viewElement = document.querySelector(`${cardName} .cards__extend`); // елемент "показати всі"
-    console.log(viewElement);
+  
     viewElement.addEventListener("click", () => makeVisible(items)); // при кліку на "показати всі", викликаємо makeVisible
 });
 
@@ -74,6 +74,61 @@ function makeVisible(cards) {
 }
 
 
+
+
+const btnOpen = document.querySelector('#btnOpen');
+const btnClose = document.querySelector('#btnClose');
+const media = window.matchMedia('(width < 767.98px)');
+const topNavMenu = document.querySelector('.menu');
+const main = document.querySelector('main');
+const body = document.querySelector('body');
+
+
+
+function setupTopNav(e){
+    if(e.matches){
+        //is mobile
+        console.log('is mobile');
+        topNavMenu.setAttribute('inert', '');
+        topNavMenu.style.transition = 'none';
+
+    }
+    else{
+        //is tablet/desktop
+        console.log('is desktop');
+        topNavMenu.removeAttribute('inert');
+        closeMobileMenu();
+    }
+}
+
+function openMobileMenu(){
+    btnOpen.setAttribute('aria-expanded', 'true')
+    topNavMenu.removeAttribute('inert');
+    topNavMenu.removeAttribute('style');
+    main.setAttribute('inert', '');
+    btnClose.focus();
+}
+
+function closeMobileMenu(){
+    btnOpen.setAttribute('aria-expanded', 'false')
+    topNavMenu.setAttribute('inert', '');
+    main.removeAttribute('inert');
+    
+    btnOpen.focus();
+
+    setTimeout(() => {
+        topNavMenu.style.transition='none';
+    },500);
+}
+
+setupTopNav(media);
+
+btnOpen.addEventListener('click', openMobileMenu);
+btnClose.addEventListener('click', closeMobileMenu);
+
+media.addEventListener('change', function(e){
+    setupTopNav(e);
+})
 
 
 

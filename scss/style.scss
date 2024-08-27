@@ -126,12 +126,86 @@ section{
         @extend %fontCal;
         font-size: 1.5rem;
     }
+    .header__open-menu{
+
+        display: none;
+        width: 40px;
+        height: 30px;
+        position: relative;
+
+        &[aria-expanded='true']{
+            + .menu{
+                translate: 0;
+            }
+        }
+
+        @media (max-width:$mobile){
+            display: block;
+        }
+
+        span{
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: $dark;
+            border-radius: 5px;
+            
+
+            &::before,
+            &::after{
+                content: "";
+                width: 100%;
+                height: 5px;
+                background-color: $dark;
+                position: absolute;
+                left: 0;
+                border-radius: 5px;
+            }
+
+            &::before{
+                top: 0;
+            }
+
+            &::after{
+                bottom: 0;
+            }
+        }
+    }
     .header__menu {
        
     }
 }
 
 .menu {
+
+    
+
+    @media (max-width:$mobile){
+        position: fixed;
+        inset: 0;
+        padding: 20px .9375rem;
+        background-color: $primary;
+
+        translate: 100vw 0;
+        transition: translate 0.5s ease-in-out;
+    }
+
+    .menu__close{
+        display: block;
+        margin-inline-start: auto;
+        margin-block-end: 8rem;
+
+        img{
+            width: 50px;
+            height: 50px;
+        }
+
+        
+        @media (min-width:$mobile){
+            display: none;
+        }
+    }
+
     .menu__list {
         height: 100%;
         display: flex;
@@ -140,22 +214,37 @@ section{
         column-gap: 3.5rem;
         row-gap: .625rem;
 
+
+        @media (max-width:$mobile){
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: center;
+            row-gap: 3.75rem;
+        }
         
     
     }
     .menu__item {
+        @media (max-width:$mobile){
+            width: 100%;
+        }
     }
     .menu__link {
         color: $gray;
         font-weight: 500;
         transition: all 0.5s;
-        position: relative;
+       
         
         &:hover{
             text-decoration: underline;
             color: $primary;
             top: 1px;
             
+        }
+
+        @media (max-width:$mobile){
+            font-size: 40px;
+            color: $dark;
         }
     }
 }
