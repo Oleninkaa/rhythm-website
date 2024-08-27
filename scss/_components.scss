@@ -15,6 +15,12 @@
     font-size: 2.75rem;
     font-weight: 400;
 
+    
+
+    &.in-view{
+        animation: textAnimation 0.7s ease-out 0.1s 1;
+    }
+
     &--light{
         color: $white;
     }
@@ -52,6 +58,9 @@
 
     }
 
+
+
+    
 }
 
 
@@ -81,6 +90,23 @@
     transform-origin: top;
 }
 
+
+@keyframes textAnimation {
+    from{
+        position: relative;
+        top: 15px;
+        left: 0;
+        scale: 0.9;
+        opacity: 0;
+    }
+    to{
+        position: relative;
+        top: 0;
+        left: 0;
+        scale: 1;
+        opacity: 1;
+        }
+}
 
 
 
