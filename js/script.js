@@ -77,12 +77,15 @@ function makeVisible(cards) {
 
 
 const btnOpen = document.querySelector('#btnOpen');
+
 const btnClose = document.querySelector('#btnClose');
 const media = window.matchMedia('(width < 767.98px)');
 const topNavMenu = document.querySelector('.menu');
 const main = document.querySelector('main');
 const body = document.querySelector('body');
 
+
+btnOpen.classList.add('open__btn');
 
 
 function setupTopNav(e){
@@ -91,6 +94,7 @@ function setupTopNav(e){
         console.log('is mobile');
         topNavMenu.setAttribute('inert', '');
         topNavMenu.style.transition = 'none';
+        
 
     }
     else{
@@ -98,6 +102,7 @@ function setupTopNav(e){
         console.log('is desktop');
         topNavMenu.removeAttribute('inert');
         closeMobileMenu();
+        
     }
 }
 
@@ -106,14 +111,15 @@ function openMobileMenu(){
     topNavMenu.removeAttribute('inert');
     topNavMenu.removeAttribute('style');
     main.setAttribute('inert', '');
-    btnClose.focus();
+    btnOpen.focus();
+    bodyScrollLock.disableBodyScroll(body);
 }
 
 function closeMobileMenu(){
     btnOpen.setAttribute('aria-expanded', 'false')
     topNavMenu.setAttribute('inert', '');
     main.removeAttribute('inert');
-    
+    bodyScrollLock.enableBodyScroll(body);
     btnOpen.focus();
 
     setTimeout(() => {
@@ -121,9 +127,22 @@ function closeMobileMenu(){
     },500);
 }
 
+function defineState(){
+
+
+    if(btnOpen.classList.contains('open__btn')){
+        openMobileMenu();
+    } else {
+        closeMobileMenu();
+    }
+    btnOpen.classList.toggle('open__btn');
+
+    
+}
+
 setupTopNav(media);
 
-btnOpen.addEventListener('click', openMobileMenu);
+btnOpen.addEventListener('click', defineState);
 btnClose.addEventListener('click', closeMobileMenu);
 
 media.addEventListener('change', function(e){
