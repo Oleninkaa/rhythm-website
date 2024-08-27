@@ -84,6 +84,9 @@ const topNavMenu = document.querySelector('.menu');
 const main = document.querySelector('main');
 const body = document.querySelector('body');
 
+const linkMenu = document.querySelectorAll('.menu__item');
+
+
 
 btnOpen.classList.add('open__btn');
 
@@ -122,6 +125,7 @@ function closeMobileMenu(){
     bodyScrollLock.enableBodyScroll(body);
     btnOpen.focus();
 
+
     setTimeout(() => {
         topNavMenu.style.transition='none';
     },500);
@@ -143,11 +147,20 @@ function defineState(){
 setupTopNav(media);
 
 btnOpen.addEventListener('click', defineState);
-btnClose.addEventListener('click', closeMobileMenu);
+
 
 media.addEventListener('change', function(e){
     setupTopNav(e);
-})
+});
+
+
+linkMenu.forEach(link => {
+    link.addEventListener('click', function(){
+        closeMobileMenu();
+        btnOpen.classList.add('open__btn');
+    });
+    
+});
 
 
 
